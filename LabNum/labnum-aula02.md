@@ -63,6 +63,7 @@
   $$
 
 
+
 * Erro relativo : 
   $$
   \frac{|u-v|}{u}, u \neq 0
