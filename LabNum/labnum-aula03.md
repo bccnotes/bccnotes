@@ -42,24 +42,25 @@
   $$
 
 
-  Para a terceira derivada (já vai dar pra ver o padrão) : 
-  $$
-  f^3(0)\sum_{k=3}^{\infty}{k\cdot a_k \cdot x^{k-3}} = 3!\cdot a_3
-  $$
-  Por indução, podemos provar que : 
-  $$
-  f^n(x) = \sum_{k=n}^{\infty}{k\cdot a_k \cdot x^{k-n}} = n! \cdot a_n \longrightarrow a_n  = \frac{f^{(n)}(0)}{n!}
-  $$
-  Então a fórmula de taylor pode ser descrita como : 
-  $$
-  f(x) = \sum_{k=0}^{\infty}{a_k\cdot x^k}, \ a_k  = \frac{f^{(k)}(0)}{k!}
-  $$
-  Dado $x_0\mathbb{E} \mathbb{R}$
-  $$
-  g(x_0 + h) =  f(h) = \sum_{n=0}^{\infty}{\frac{f^{(n)}(0)\cdot h^n}{n!}} = \sum_{n=0}^{\infty}{\frac{g^{(n)}(x_0)\cdot h^n}{n!}}
-  $$
 
-  ***
+  Para a terceira derivada (já vai dar pra ver o padrão) : 
+$$
+  f^3(0)\sum_{k=3}^{\infty}{k\cdot a_k \cdot x^{k-3}} = 3!\cdot a_3
+$$
+  Por indução, podemos provar que : 
+$$
+  f^n(x) = \sum_{k=n}^{\infty}{k\cdot a_k \cdot x^{k-n}} = n! \cdot a_n \longrightarrow a_n  = \frac{f^{(n)}(0)}{n!}
+$$
+  Então a fórmula de taylor pode ser descrita como : 
+$$
+  f(x) = \sum_{k=0}^{\infty}{a_k\cdot x^k}, \ a_k  = \frac{f^{(k)}(0)}{k!}
+$$
+  Dado $x_0\mathbb{E} \mathbb{R}$
+$$
+  g(x_0 + h) =  f(h) = \sum_{n=0}^{\infty}{\frac{f^{(n)}(0)\cdot h^n}{n!}} = \sum_{n=0}^{\infty}{\frac{g^{(n)}(x_0)\cdot h^n}{n!}}
+$$
+
+***
 
 * Exemplo : Cálculo de $f(x_0)$ usando a aproximação de taylor
 
