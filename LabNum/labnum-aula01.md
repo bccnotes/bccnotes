@@ -1,26 +1,25 @@
 # Aula 01
 
 
-
 ## Informações da disciplina : 
 
-​	Prof.: Marcelo Queiroz
+Prof.: Marcelo Queiroz
 
-​	**Site**: www.ime.usp.br/~mqz
+**Site**: www.ime.usp.br/~mqz
 
-​	**Contato** : mqz@ime.usp.br
+**Contato** : mqz@ime.usp.br
 
-​	**Bibliografia** : A first Course in Numerical Methods, Ascher & Greifs, 2011; Caps 1,2,3,10,11,14,15.
+**Bibliografia** : A first Course in Numerical Methods, Ascher & Greifs, 2011; Caps 1,2,3,10,11,14,15.
 
-​	**Provas**: P1: 22/04, P2: 29/05, P3: 26/6; No caso de perder uma prova por motivo justificável, a média vai ser resolvida indivuldalmente com o professor
+**Provas**: P1: 22/04, P2: 29/05, P3: 26/6; No caso de perder uma prova por motivo justificável, a média vai ser resolvida indivuldalmente com o professor
 
-​	**EPs**: Vários ep's pequenos
+**EPs**: Vários ep's pequenos
 
-​	**Medias** : MP = $\frac{P1+2\cdot P2+2 \cdot P3}{5}$ Mep = Média simples, MF = $\frac{3\cdot MP + MEP}{4}$, se MP >= 5 && MEP >= 5; Do contrário, MF = min{MP,MEP}.
+**Medias** : MP = $\frac{P1+2\cdot P2+2 \cdot P3}{5}$ Mep = Média simples, MF = $\frac{3\cdot MP + MEP}{4}$, se MP >= 5 && MEP >= 5; Do contrário, MF = min{MP,MEP}.
 
-​	**Linguagem**: Octave
+**Linguagem**: Octave
 
-***
+<hr>
 
 ## Cap 1 : Algoritmos Numéricos e computação Científica (O que será visto)
 
@@ -29,7 +28,7 @@
 - **Condicionamento do problema e estabilidade do algoritmo**: 
 - **Medidas como O(...) e $\theta$(...) para avaliar Eficiência e acurácia**
 
-***
+<hr>
 
 ## Cap 2 : Aritmética do ponto flutuante e erro de arredondamento
 
@@ -37,7 +36,7 @@
 * **Acumulação de erros**
 * **Padrão IEEE 1985 -> 2008 **
 
-***
+<hr>
 
 ## Cap 3 : Equações não lineares em 1 var.  Encontrar x tal que f(x) = 0
 
@@ -46,7 +45,7 @@
 * **Método de Newton**
 * **Otimização de funções de 1 variável**
 
-***
+<hr>
 
 ## Cap 10 : Interpolação polinomial 
 
@@ -55,7 +54,7 @@
 * **manipulações** : Diferenciação/integração
 * **INterpolação** : Polinomial, lagrange, newton.
 
-***
+<hr>
 
 ## Cap 14 : Diferenciação Numérica 
 
@@ -63,7 +62,7 @@
  * Taylor
  * Aproximação c/ 2 pontos, 3 pontos, 5 pontos
 
-***
+<hr>
 
 ## Cap 15 : Integração Numérica
 
