@@ -10,9 +10,10 @@ Notas de Aula
    :maxdepth: 1
    :caption: Sumário
 
-   Laboratório de Métodos Numéricos <labnum>
    Algoritmos e Estruturas de Dados 2 <ed2>
    Cálculo Pi <calculo-pi>
+   Laboratório de Métodos Numéricos <labnum>
+   Modelagem e Simulação <modelagem>
 
 
 

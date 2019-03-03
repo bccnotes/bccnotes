@@ -1,5 +1,5 @@
-Modelagem e Simulação
-=====================
+Laboratório de Métodos Numéricos
+================================
 
 .. toctree::
    :maxdepth: 2
