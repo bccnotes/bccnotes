@@ -1,7 +1,7 @@
 # Notas de Aula
 
 ## Instalação
-Requer Poetry.
+Requer [Poetry.
 
 ```
 python3 -m venv venv
