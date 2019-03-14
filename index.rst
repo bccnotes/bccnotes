@@ -14,6 +14,7 @@ Notas de Aula
    Cálculo Pi <calculo-pi>
    Laboratório de Métodos Numéricos <labnum>
    Modelagem e Simulação <modelagem>
+   Estatística Descritiva <descritiva>
 
 
 
