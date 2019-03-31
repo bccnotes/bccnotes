@@ -2,7 +2,70 @@
 
 ***
 
+## Bags Queues Stacks
 
+- Bag é uma ADT iteravel que possui asoperação de : 
+  - add
+  - Em suma : é uma pilha da qual voce não remove elelementos
+  - Serve pra simplesmente agrupar conteudo e iterar sobre eles
+- Queue é uma ADT iteravel que segue a filosofia de FifO : FIst in, First out. Possui as operações : 
+  - Enqueue: Empilha
+  - dequeue : desempilha
+- Stack :  ADT iterável  que segue a filosofia de LIFO : last in first out. Possui s operações
+  - Push : empilha
+  - pop : desempilha
+
+
+
+------
+
+### Genericos :
+
+  Colocando a notação <ITEM> na definição de uma classe torna ela generica para instanciação de um objeto. Ao instanciar esse objeto, deve-se especificar o tipo dele, na forma : 
+
+```java
+  Stack<String> s = new Stack<String>();
+```
+
+
+
+
+
+### Iteradores
+
+- Uma classe implementa a interface iteravel se : 
+
+  - Implementa um metodo "Iterator", que retorna um objeto iteravel
+
+    - ```java
+      public Iterator<Item> iterator() {
+          return new OBJETOITERAVEL();
+      }
+      ```
+
+    - 
+
+    - OBS.: Um objeto iteravel é um objeto que possui as operaçẽos next(), hasNext(), remove().
+
+  - Importa a interface do iterator : import java.util.Iterator
+
+  - Se compromete a implementar um método iterador, especificando , ao lado do nome da classe, a seguinte instrução : 
+
+    ```java
+    implements Iterable<Item>
+    ```
+
+  - OBS : Arrays NÃO são iteraveis. O Java aceita usar forEach com um array, mas ele não é um objeto iteravel.
+
+
+
+------
+
+## Union Find
+
+- Coleção disjunta : É uma coleção de vertices para os quais a intersecção de qualquer par grupo de vertices vale 0.
+
+## 
 
 
 
@@ -63,6 +126,7 @@
     $$
     n* \geq 2^{r.left.dist}-1 \therefore n* \geq 2^{r.dist}* k - 1
     $$
+
 
 
 
