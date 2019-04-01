@@ -108,7 +108,85 @@
 
     * Isso torna o find e o union amortizado O(lg * n) - mas na prática amortizado é O(1).
 
-## 
+***
+
+
+
+### Heaps
+
+* Estrutura de dados que mantém as seguinte regras : 
+
+  * Um elemento pode ter dois filhos
+    * O filho esquerdo de um elemento i vale 2*i
+    * O filho direito de um elemento i vale 2*i + 1
+    * O máximo elemento a ter filho esquerdo vale n/2
+    * O heap começa a ser indexado a partir de 1
+  * Um max heap é um heap que segue a regra : 
+    * Para todo nó i, i é maior que seus filhos
+
+* Dado um vetor, como transforma-lo em um heap? Usando a operação básica do **sink**
+
+  * O sink parte do principio que recebe um heap **quase perfeito** : Um elemento i está fora do lugar, e os filhos de i já são heaps. O sink "afunda" i no lugar certo do heap.
+
+  ``` java
+      private void sink(int i) {
+          // faz o sink do índice i do heap.
+          // um elemento i tem filho esquerdo se i <= n/2
+          // um elemento i tem filho direito se i <= n/2+1
+          // assumo aqui que só vou chamar o sink se o elemento i tiver um filho.
+          if (i <= this.n/2) {
+  
+              int lrg = maior(i); //acha o maior dos filhos de i
+              if (lrg == i)
+                  return;
+  
+              if (lrg == esq(i)) {
+                  swap(esq(i), i);
+                  sink(esq(i));
+              }
+  
+              else {
+                  swap(dir(i), i);
+                  sink(dir(i));
+              }
+          }
+  
+      }
+  ```
+
+  Partindo so sink, podemos transformar um vetor num heap. Basta fazer : 
+
+  ```java
+  private void heapfy() {
+       for(int i = this.n/2; i>=1; i--) {
+           sink(i);
+       }
+  }
+  ```
+
+  Existe uma operação similar ao sink chamado **swim** que é utilizado pra adcionar um elemento numa fila de prioridade : 
+
+  ```java
+      private void swim(int i) {
+  
+          for (int j = i; j > 1; j = j/2) {
+              if (this.heap[j] < this.heap[j/2])
+                  break;
+              else {
+                  swap(j, j/2);
+              }
+          }
+      }
+  ```
+
+
+
+  * Fila de prioridade : É um heap para o qual os itens de maior valor ficam no topo (é um max heap)
+    * Operações basicas : 
+      * add : Adciona o item na fila de prioridade. Voce coloca o elemento no fim do array e faz **swim** nele
+      * Remove: Troca o primeiro elemento com o ultimo, tira o ultimo da lista, e faz **sink** do primeiro.
+
+ 
 
 
 
@@ -176,23 +254,18 @@
 
 
 
-```mathematica
+
 Sendo $k \geq 1$, pois a arvore esquerdista possui distancia esquerda maior ou igual que a atual. Dessa forma concluimos que : 
 $$
 n* \geq n
 $$
-```
+Mas
+$$
+n \geq n' \implies n* \geq n'
+$$
+Assim nós concluímos que **existem menos (ou o mesmo número de) elementos à direita do que a esquerda de um nó**.
 
-
-    Mas
-    $$
-    n \geq n' \implies n* \geq n'
-    $$
-
-
-    Assim nós concluímos que **existem menos (ou o mesmo número de) elementos à direita do que a esquerda de um nó**.
-    
-    Como sabemos que a altura de um nó numa arvore é dada por log(n/r), a altura da subarvore a direita de um dado nó é com certeza menor ou igual a subarvore da esquerda.
+Como sabemos que a altura de um nó numa arvore é dada por log(n/r), a altura da subarvore a direita de um dado nó é com certeza menor ou igual a subarvore da esquerda.
 
   * Eu fiz tudo isso pra poder argumentar que, ao fazer um merge de dois leftist heaps, **é mais vantajoso olhar para a subarvore direita do leftist heap**.
 
