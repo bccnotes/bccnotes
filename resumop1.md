@@ -63,7 +63,50 @@
 
 ## Union Find
 
-- Coleção disjunta : É uma coleção de vertices para os quais a intersecção de qualquer par grupo de vertices vale 0.
+- Coleção disjunta dinâmica : É uma coleção de vertices modificados ao longo do tempo para os quais a intersecção de qualquer par grupo de vertices vale 0.
+
+- O union find tem duas operações elementares : 
+
+  - find : busca o representante daquela coleção
+  - Union : junta duas coleções
+
+- Ideia de estrutura para um Union Find. Dado um conjunto de itens, crio um array tal que id[i] denota qual coleção o i pertence.
+
+
+
+  - O elemento tal que id[i] = i id da coleção de i
+  - Esse tipo de algoritmo se chama **quick-find**, no qual é muito facil descobrir qual a coleção na qual o meu elemento pertence (é só fazer um acesso em arr[i])
+  - Em contrapartida, o union é o(N), porque para unir dois caras, eu tenho que percorrer o arr e mudar o id de um dos grupos para o id do outro grupos
+
+- **Quick-Union** : Faz uso da ideia de **Florestas disjuntas**, mudando a ideia do array tendo que id[ i ] = pai de i. Vamos renomear o array para pai[ ].
+
+  - Se id[ p ] == p, então p é o representante da coleção.
+
+  - Para unir duas florestas disjuntas, nos juntamos a raiz de uma com o outro elemento
+
+  - Agora o union fica muito rapido : fazendo union(p, q) basta fazer pai[find(p)] = pai[find(q)].
+
+  - Mas o find fica um pouco pior... para achar o representante de uma coleção, eu tenho que ficar fazendo find(P) até eu achar um cara tal que find(p) == p.
+
+- **Weighted quick union** : O quick union tem um problema : se eu fizer union(p, q) e se p <<<< q, p vira o pai de q. Agora imagine que estou fazendo varias operações de union(p, q) e q sempre é um unico nó, voce cria uma coleção linear. Dai o find(p) sempre será O(N), sendo que dava pra fazer algo como O(log n) se eu inserisse de forma esperta.
+
+  - O **weighted quick union** resolve isso sempre fazendo a coleção de maior tamanho ser a coleção pai. Isso é feito usando um array de tamanho da coleção ( sz [ ]). O tamanho de uma coleção é dado por sz [ i ], para todo i de uma mesma coleção ele retorna o mesmo valor.
+    - Isso garante que o o find (e o union, porque ele depende do find) sejam O( log n ).
+  - obs : Isso garante tambem que toda arvore com altura h tem pelo meons 2^h nós.
+
+- **Path Compression** :  É muito interessante encurtar os caminhos durante cada find. Se o find sempre quer procurar o representante de uma coleção, por que não conectar todos os filhos ao representante?
+
+  - Isso é feito dentro do find : 
+
+    ```java
+    public in find(int p) {
+        if (p != pai[p])
+            pai[p] = find(pai[p]); // chamo a recursão pro pai, e na volta da recursão vai atribuindo todos elementos ao representante geral
+        return pai[p];
+    }
+    ```
+
+    * Isso torna o find e o union amortizado O(lg * n) - mas na prática amortizado é O(1).
 
 ## 
 
@@ -126,6 +169,7 @@
     $$
     n* \geq 2^{r.left.dist}-1 \therefore n* \geq 2^{r.dist}* k - 1
     $$
+
 
 
 
