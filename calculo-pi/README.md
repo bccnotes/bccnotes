@@ -5,3 +5,7 @@
 # Resoluções da lista 2 de MAT0236 (Cálculo PI)
 
 ## Observação: faltou fazer alguns exercícios.
+
+# Resoluções da lista 3 de MAT0236 (Cálculo PI)
+
+## Observação: faltou fazer alguns exercícios.
