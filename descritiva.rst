@@ -1,7 +1,7 @@
 Estatística Descritiva
 ======================
 
-..toctree::
+.. toctree::
     :maxdepth: 2
     :caption: Contents:
 

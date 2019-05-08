@@ -13,8 +13,6 @@ Notas de Aula
    Algoritmos e Estruturas de Dados 2 <ed2>
    Cálculo Pi <calculo-pi>
    Laboratório de Métodos Numéricos <labnum>
-   Modelagem e Simulação <modelagem>
-   Estatística Descritiva <descritiva>
    Programação Paralela <paralela>
 
 
