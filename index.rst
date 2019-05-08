@@ -15,6 +15,7 @@ Notas de Aula
    Laboratório de Métodos Numéricos <labnum>
    Modelagem e Simulação <modelagem>
    Estatística Descritiva <descritiva>
+   Programação Paralela <paralela>
 
 
 
